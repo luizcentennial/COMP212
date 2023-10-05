@@ -6,7 +6,7 @@ namespace Example13 {
         // PREDICATE DELEGATES:
         //
         // The Predicate type is a kind of delegate that
-        // encapsulates a method that may take in parameters
+        // encapsulates a method that takes in at least one parameter
         // and returns a Boolean value.
         //
         // It gives a more streamlined way for working with
