@@ -2,7 +2,7 @@
 
 namespace Example14 {
 
-    // EVENTS
+    // EVENTS:
     //
     // Events are signals that communicate the occurrence of
     // something. Events can be subscribed to, or observed,

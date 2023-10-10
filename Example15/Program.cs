@@ -3,7 +3,7 @@ using System;
 
 namespace Example15 {
 
-    // EVENTS (cont.)
+    // EVENTS (cont.):
     //
     // This example shows how events can be used in model classes
     // to allow for an event-driven approach.
