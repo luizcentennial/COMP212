@@ -13,7 +13,7 @@ namespace Example15 {
             var product = new Product() {
                 Name = "Electric Guitar",
                 Description = "Gibson Les Paul Custom 1959 Reissue",
-                Price = 12.999
+                Price = 12999.99
             };
 
             var order = new Order();

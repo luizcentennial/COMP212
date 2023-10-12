@@ -13,7 +13,7 @@ namespace Example16.Models {
             this._name = name;
         }
 
-        public virtual void Subscribe(Sender sender) {
+        public virtual void Subscribe(IObservable<Message> sender) {
             this._cancellation = sender.Subscribe(this);
         }
 
@@ -31,6 +31,14 @@ namespace Example16.Models {
         }
 
         public virtual void OnNext(Message message) {
+            // The magic happens here.
+            // This is the method that gets executed when a message is received.
+            // It also carries a reference encapsulating all message data.
+
+            // Technically, this method can implement all logic that should
+            // run when a message is received. Alternatively, we can use events to
+            // provide different recipients with the ability to respond to messages
+            // in different ways.
             this.OnMessageReceived.Invoke(message);
         }
     }
