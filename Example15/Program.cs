@@ -19,8 +19,8 @@ namespace Example15 {
             var order = new Order();
 
             // Subscribing to order events.
-            order.ProductAdded += (p, o) => Log($"Product '{p.Name}' added to order '{o.OrderID}' at {DateTime.Now}.");
-            order.ProcessingStarted += (o) => Log($"Order '{o.OrderID}' started processing at {DateTime.Now}.");
+            order.ProductAdded += (sender, args) => Log($"Product '{args.Product.Name}' added to order '{args.Order.OrderID}' at {DateTime.Now}.");
+            order.ProcessingStarted += (sender, args) => Log($"Order '{args.Order.OrderID}' started processing at {DateTime.Now}.");
 
             order.Add(product);
             order.Process();

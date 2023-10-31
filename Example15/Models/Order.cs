@@ -1,10 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using Example15.EventArgs;
 
 namespace Example15.Models {
     internal class Order {
-        public event Action<Product, Order> ProductAdded;
-        public event Action<Order> ProcessingStarted;
+        public event EventHandler<ProductAddedEventArgs> ProductAdded;
+        public event EventHandler<ProcessingStartedEventArgs> ProcessingStarted;
 
         public string OrderID { get; private set; }
         public string CustomerName { get; set; }
@@ -37,13 +38,15 @@ namespace Example15.Models {
             this.Items.Add(item);
 
             // Triggering ProductAdded event.
-            this.ProductAdded.Invoke(product, this);
+            var args = new ProductAddedEventArgs() { Order = this, Product = product };
+            this.ProductAdded.Invoke(this, args);
         }
 
         public void Process() {
             // Order processing logic.
 
-            this.ProcessingStarted.Invoke(this);
+            var args = new ProcessingStartedEventArgs() { Order = this };
+            this.ProcessingStarted.Invoke(this, args);
         }
     }
 }
