@@ -35,9 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example15", "Example15\Exam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example16", "Example16\Example16.csproj", "{F4D63BDF-9828-477A-974B-2B3C3EF2B18D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example17", "Example17\Example17.csproj", "{A308D450-9F25-43D6-8626-E399E9A68B89}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example17", "Example17\Example17.csproj", "{A308D450-9F25-43D6-8626-E399E9A68B89}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example18", "Example18\Example18.csproj", "{DC3259A1-FB2A-4970-97DA-05DFDCF17913}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example18", "Example18\Example18.csproj", "{DC3259A1-FB2A-4970-97DA-05DFDCF17913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example19", "Example19\Example19.csproj", "{03009932-3F35-4490-A6FA-E0F955902763}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -117,6 +119,10 @@ Global
 		{DC3259A1-FB2A-4970-97DA-05DFDCF17913}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC3259A1-FB2A-4970-97DA-05DFDCF17913}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DC3259A1-FB2A-4970-97DA-05DFDCF17913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03009932-3F35-4490-A6FA-E0F955902763}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03009932-3F35-4490-A6FA-E0F955902763}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03009932-3F35-4490-A6FA-E0F955902763}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03009932-3F35-4490-A6FA-E0F955902763}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
