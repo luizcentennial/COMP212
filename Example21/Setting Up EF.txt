@@ -1,0 +1,46 @@
+﻿Follow the instructions below on Visual Studio to add database support to the application:
+
+Part 01: Setting Up a Local Database.
+
+01. In Visual Studio, use the search bar to find the "SQL Server Object Explorer".
+    If this option is not available, you may need to launch Visual Studio Installer and add the required components.
+02. Expand "SQL Server", then "MSSQLLocalDB".
+03. Right-click the "Databases" folder, and select option "Add New Database".
+04. Give your new database a uniquely identifiable name. Click "OK".
+05. Your new database should be available in the "Databases" folder.
+    Right-click on it, and select "Properties".
+06. In the Properties panel, look for the "Connection string" property. 
+    Copy this value in a new Notepad file. It will be useful later.
+
+
+Part 02: Setting Up Entity Framework.
+
+01. Right-click your project, and select "Manage NuGet Packages...".
+02. Install the following NuGet packages (all at version 5.0.0):
+    - Microsoft.EntityFrameworkCore
+    - Microsoft.EntityFrameworkCore.Design
+    - Microsoft.EntityFrameworkCore.SqlServer
+    - Microsoft.EntityFrameworkCore.Tools
+03. Create a new folder named "Data".
+04. In the new folder, creata a new class named "DataContext". 
+    This class extends "DbContext", which is provided in namespace Microsoft.EntityFrameworkCore.
+05. In the new class, add a DbSet<T> property for each desired table. T is the model class for this entity. 
+06. Override method "OnConfiguring", which allows for further context configuration, such as connection string, advanced model relationships, etc. 
+07. Ensure your model classes have the [Key] attribute attached to its primary key property.
+    This will allow EF to more easily understand your data model.
+ 
+
+Part 03: Creating a Migration.
+
+01. On SQL Server Object Explorer, check that your database is brand new and does not contain any tables.
+02. On the top menu, select Tools -> NuGet Package Manager -> Package Manager Console.
+03. Make sure option "Default project" selects the project the database is for (Example21).
+04. Run command: Add-Migration InitialCreate
+05. The command will create a new "Migrations" folder that contains some auto-generated code.
+    This code will take care of updating the database when a migration is applied.
+06. To update the database, run command: Update-Database
+07. Open SQL Server Object Explorer and check the new tables have been successfully created.
+08. From here, whenever a data model update is needed, you can just update your model classes as needed, and apply new migrations.
+
+
+After completing all these steps, you can now use instances of the DataContext class to perform data operations.
