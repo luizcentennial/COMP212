@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 
 namespace Example20.Models {
     public class Product {
@@ -18,6 +19,12 @@ namespace Example20.Models {
             catch { 
                 return false; 
             }
+        }
+
+        public override int GetHashCode() {
+            string value = string.Join(null, this.ProductID.Where(c => int.TryParse(c.ToString(), out _)).Take(8));
+
+            return int.Parse(value);
         }
 
         public static bool operator ==(Product left, Product right) {
