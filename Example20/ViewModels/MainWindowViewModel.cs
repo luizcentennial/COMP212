@@ -39,7 +39,7 @@ namespace Example20.ViewModels {
         }
 
         private void Init() {
-            LoadProducts();
+            this.LoadProducts();
             this.NewProduct = new Product();
 
             this.CreateProductCommand = new RelayCommand(
