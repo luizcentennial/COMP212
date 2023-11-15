@@ -28,6 +28,7 @@ namespace Example21.Services.Implementations {
 
         public void Update(Product obj) {
             this._dataContext.Update(obj);
+            this._dataContext.SaveChanges();
         }
     }
 }

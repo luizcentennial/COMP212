@@ -30,10 +30,6 @@ namespace Example21.ViewModels {
 
         public ICommand CreateProductCommand { get; set; }
 
-        public MainWindowViewModel(Product selectedProduct) {
-            SelectedProduct = selectedProduct;
-        }
-
         public MainWindowViewModel() {
             this.Init();
         }
