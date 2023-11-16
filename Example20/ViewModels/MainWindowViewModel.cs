@@ -30,10 +30,6 @@ namespace Example20.ViewModels {
 
         public ICommand CreateProductCommand { get; set; }
 
-        public MainWindowViewModel(Product selectedProduct) {
-            SelectedProduct = selectedProduct;
-        }
-
         public MainWindowViewModel() {
             this.Init();
         }
@@ -43,7 +39,7 @@ namespace Example20.ViewModels {
             this.NewProduct = new Product();
 
             this.CreateProductCommand = new RelayCommand(
-                action: (o) => CreateProduct()
+                action: (o) => this.CreateProduct()
             );
         }
 

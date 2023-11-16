@@ -39,7 +39,7 @@ namespace Example21.ViewModels {
             this.NewProduct = new Product();
 
             this.CreateProductCommand = new RelayCommand(
-                action: (o) => CreateProduct()
+                action: (o) => this.CreateProduct()
             );
         }
 
