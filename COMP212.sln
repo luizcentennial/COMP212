@@ -45,9 +45,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example20", "Example20\Exam
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example21", "Example21\Example21.csproj", "{495273E1-12F4-4DCB-8032-6D436FCC7EA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example22.Domain", "Example22.Domain\Example22.Domain.csproj", "{D4A8D2DE-04EA-4B34-82EE-1CC7A4357427}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example22.Domain", "Example22.Domain\Example22.Domain.csproj", "{D4A8D2DE-04EA-4B34-82EE-1CC7A4357427}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example22.App", "Example22.App\Example22.App.csproj", "{87812613-8772-4753-9E0B-1E312BD2D23B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example22.App", "Example22.App\Example22.App.csproj", "{87812613-8772-4753-9E0B-1E312BD2D23B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Example23", "Example23\Example23.csproj", "{60BB7787-AF51-4FDC-AF0E-2F9261FB8A22}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -149,6 +151,10 @@ Global
 		{87812613-8772-4753-9E0B-1E312BD2D23B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{87812613-8772-4753-9E0B-1E312BD2D23B}.Release|Any CPU.Build.0 = Release|Any CPU
 		{87812613-8772-4753-9E0B-1E312BD2D23B}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{60BB7787-AF51-4FDC-AF0E-2F9261FB8A22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60BB7787-AF51-4FDC-AF0E-2F9261FB8A22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60BB7787-AF51-4FDC-AF0E-2F9261FB8A22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60BB7787-AF51-4FDC-AF0E-2F9261FB8A22}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
