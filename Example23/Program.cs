@@ -15,8 +15,9 @@ namespace Example23 {
     //
     // The input of a regression algorithm is a set of examples with labels of known values.
     // The output of a regression algorithm is a function, which you can use to predict the
-    // label value for any new set of input features. Examples of regression scenarios
-    // include:
+    // label value for any new set of input features.
+    //
+    // Examples of regression scenarios include:
     //
     // - Predicting house prices based on house attributes such as number of bedrooms,
     //   location, or size.
@@ -27,6 +28,11 @@ namespace Example23 {
 
     internal class Program {
         static void Main(string[] args) {
+
+            // In this example, you will see how to use ML.NET to predict the price
+            // of an apartment based on its square-footage.
+
+            // Defining ML context.
             MLContext mlContext = new MLContext();
 
             // Creating training data.
