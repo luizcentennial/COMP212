@@ -9,6 +9,6 @@ namespace Example23.Models {
         // the PredictedPrice property.
         
         [ColumnName("Score")]
-        public float Price { get; set; }
+        public float PredictedPrice { get; set; }
     }
 }

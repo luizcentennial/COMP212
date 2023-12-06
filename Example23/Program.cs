@@ -36,7 +36,7 @@ namespace Example23 {
             MLContext mlContext = new MLContext();
 
             // Creating training data.
-            ApartmentData[] ApartmentData = {
+            ApartmentData[] apartmentData = {
                new ApartmentData() { SquareFootage = 1.1F, Price = 1.2F },
                new ApartmentData() { SquareFootage = 1.9F, Price = 2.3F },
                new ApartmentData() { SquareFootage = 2.8F, Price = 3.0F },
@@ -44,7 +44,7 @@ namespace Example23 {
             };
 
             // Preparing training data.
-            IDataView trainingData = mlContext.Data.LoadFromEnumerable(ApartmentData);
+            IDataView trainingData = mlContext.Data.LoadFromEnumerable(apartmentData);
 
             // Creating pipeline with the Stochastic Dual Coordinate Ascent method.
             // SDCA is a stochastic and streaming optimization algorithm.
@@ -61,7 +61,7 @@ namespace Example23 {
 
             var predictionOutput = engine.Predict(predictionInput);
 
-            Console.WriteLine($"Predicted price for size: {predictionInput.SquareFootage * 1000} sqft = {predictionOutput.Price:C}M");
+            Console.WriteLine($"Predicted price for size: {predictionInput.SquareFootage * 1000} sqft = {predictionOutput.PredictedPrice:C}M");
         }
     }
 }
